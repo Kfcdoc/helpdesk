@@ -1,5 +1,11 @@
  
- <?php include "header.php"?>
+ <?php 
+    include "header.php";
+    if (isset($_SESSION['usuario'])&&   
+        $_SESSION['usuario']['id'] == 1 || $_SESSION['usuario']['id'] == 2) {
+?>
+
+
 
 <!-- Page Content -->
     <div class="container">
@@ -9,5 +15,9 @@
         <p class="lead">Content on the page will</p>
     </div>
     </div>  
-<?php include "footer.php"?>
+<?php include "footer.php";
+    } else {
+        header("Location: ../index.html");
+    }
+?>
     
