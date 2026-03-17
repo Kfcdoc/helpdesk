@@ -83,22 +83,21 @@
             $usuario = mysqli_fetch_array($respuesta);
 
             $datos = array(
-                `idUsuario`, => $usuario['idUsuario'],
-                `nombreUsuario`, => $usuario['nombreUsuario'],
-                `rol`, => $usuario['rol'],
-                `idRol`, => $usuario['idRol'],
-                `ubicacion`, => $usuario['ubicacion'],
-                `activo`, => $usuario['activo']
-                `idPersona`, => $usuario['idPersona'],
-                `nombrePersona`, => $usuario['nombrePersona'],
-                `paterno`, => $usuario['paterno'],
-                `materno`, => $usuario['materno'],
-                `fechaNacimiento`, => $usuario['fechaNacimiento'],
-                `sexo`, => $usuario['sexo'],
-                `correo`, => $usuario['correo'],
-                `telefono`, => $usuario['telefono']
-
-            );
+                    'idUsuario'      => $usuario['idUsuario'],
+                    'nombreUsuario'  => $usuario['nombreUsuario'],
+                    'rol'            => $usuario['rol'],
+                    'idRol'          => $usuario['idRol'],
+                    'ubicacion'      => $usuario['ubicacion'],
+                    'activo'         => $usuario['activo'],
+                    'idPersona'      => $usuario['idPersona'],
+                    'nombrePersona'  => $usuario['nombrePersona'],
+                    'paterno'        => $usuario['paterno'],
+                    'materno'        => $usuario['materno'],
+                    'fechaNacimiento'=> $usuario['fechaNacimiento'],
+                    'sexo'           => $usuario['sexo'],
+                    'correo'         => $usuario['correo'],
+                    'telefono'       => $usuario['telefono']
+);
             return $datos;
             
                                         
