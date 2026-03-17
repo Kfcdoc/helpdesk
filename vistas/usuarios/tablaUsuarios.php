@@ -34,13 +34,12 @@ FROM
         <th>Apellido materno</th>
         <th>Nombre</th>
         <th>Edad</th>
-        <th>Sexo</th>
         <th>Telefono</th>
         <th>Correo</th>
         <th>Usuario</th>
         <th>Ubicación</th>
+        <th>Sexo</th>
         <th>Reset Password</th>
-        <th>Cambiar Rol</th>
         <th>Activar</th>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -54,19 +53,14 @@ FROM
             <td><?php echo $mostrar['materno']; ?></td>
             <td><?php echo $mostrar['nombrePersona']; ?></td>
             <td><?php echo $mostrar['fechaNacimiento']; ?></td>
-            <td><?php echo $mostrar['sexo']; ?></td>
             <td><?php echo $mostrar['telefono']; ?></td>
             <td><?php echo $mostrar['correo']; ?></td>
             <td><?php echo $mostrar['nombreUsuario']; ?></td>
             <td><?php echo $mostrar['ubicacion']; ?></td>
+            <td><?php echo $mostrar['sexo']; ?></td>
             <td>
                 <button class="btn btn-success btn-sm">
                     Cambiar password
-                </button>
-            </td>
-            <td>
-                <button class="btn btn-primary btn-sm">
-                    Cambiar rol
                 </button>
             </td>
             <td>
@@ -83,7 +77,7 @@ FROM
                 <?php } ?>
     </td>
             <td>
-                <button class="btn btn-warning btn-sm">
+                <button class="btn btn-warning btn-sm"data-toggle="modal" data-target="#modalActualizarUsuarios"onclick="obtenerDatosUsuario('<?php echo $mostrar['idUsuario'] ?>')">
                     Editar
                 </button>
             </td>
