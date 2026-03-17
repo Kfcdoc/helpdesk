@@ -1,7 +1,7 @@
 <script src="../public/jquery/jquery-3.6.0.min.js"></script>
     <script src="../public/bootstrap/popper.min.js"></script>
     <Script src="../public/bootstrap/bootstrap.min.js"></Script>
-
-
+    <script src="../public/datatable/jquery.dataTables.min.js"></script>
+    <script src="../public/datatable/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>

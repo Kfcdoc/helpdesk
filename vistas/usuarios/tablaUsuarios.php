@@ -27,7 +27,7 @@ FROM
     $respuesta = mysqli_query($conexion, $sql);
 ?>
 
-<table class="table table-sm">
+<table class="table table-sm" id="tablaUsuariosDataTable">
     <thead>
         <th>Apellido paterno</th>
         <th>Apellido materno</th>
@@ -80,5 +80,9 @@ FROM
         </tr>
         <?php } ?>
     </tbody>
-
 </table>
+<script>
+    $(document).ready(function() {
+        $('#tablaUsuariosDataTable').DataTable();
+    });
+</script>
