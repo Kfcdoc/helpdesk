@@ -23,6 +23,9 @@
 <?php 
     include "asignacion/modalAsignar.php";
     include "footer.php";
+?>
+<script src="../public/js/asignacion/asignacion.js"></script>
+<?php
     } else {
         header("Location: ../index.html");
     }
