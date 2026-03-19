@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../public/datatable/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../public/datatable/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../public/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../public/datatable/buttons.dataTables.min.css">
     
     <script src="../public/jquery/jquery-3.6.0.min.js"></script>
     <script src="../public/bootstrap/popper.min.js"></script>
@@ -99,3 +101,7 @@
             </div>
         </div>
     </nav>
+
+    <?php
+        include "inicio/modalActualizarDatosPersonales.php";
+    ?>
