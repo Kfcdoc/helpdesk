@@ -29,5 +29,31 @@
             $query->close();
             return $respuesta;
         }
+        public function eliminarAsignacion($idAsignacion) {
+            $conexion = Conexion::conectar();
+            $sql = "DELETE FROM t_asignacion WHERE id_asignacion = ?";
+            $query = $conexion->prepare($sql);
+            $query->bind_param('i', $idAsignacion);
+            $respuesta = $query->execute();
+            $query->close();
+            return $respuesta;
+        }
     }
 ?>
+Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
