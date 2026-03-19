@@ -6,6 +6,7 @@
         $con = new Conexion();
         $conexion = $con->conectar();
 ?>
+
 <!-- Page Content -->
     <div class="container">
         <div class="card border-0 shadow my-5">
@@ -26,3 +27,14 @@
     include "reportesCliente/modalCrearReporte.php";
     include "footer.php";
 ?>
+    <script src="../public/js/reportesCliente/reportesCliente.js"></script>
+    
+<?php else : ?>
+    <script type="module">
+        import * as modulo from "../public/js/modulo.js";
+        window.location.href = `${modulo.BASEURL}/index.html`
+    </script>
+<?php
+    endif;
+?>
+    

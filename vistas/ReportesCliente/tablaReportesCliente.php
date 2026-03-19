@@ -78,3 +78,44 @@
     <?php } ?>
     </tbody>
 </table>
+
+<script>
+    $(document).ready(function(){
+        $('#tablaReportesClienteDataTable').DataTable({
+            language : {
+                url : "../public/datatable/es_es.json"
+            },
+            dom: 'Bfrtip',
+            buttons : {
+                buttons : [
+                    {   
+                        extend : 'copy', 
+                        className : 'btn btn-outline-info', 
+                        text : '<i class="far fa-copy"></i> Copiar' 
+                    },
+                    {   
+                        extend : 'csv', 
+                        className : 'btn btn-outline-primary', 
+                        text : '<li class="fas fa-file-csv"></li> CSV' 
+                    },
+                    {   
+                        extend : 'excel', 
+                        className : 'btn btn-outline-success', 
+                        text : '<i class="fas fa-file-excel"></i> XLS' 
+                    },
+                    {   
+                        extend : 'pdf', 
+                        className : 'btn btn-outline-danger', 
+                        text : '<i class="fas fa-file-pdf"></i> PDF' 
+                    },
+                ],
+                dom : {
+                    button : {
+                        className : 'btn'
+                    }
+                }
+            }
+        });
+    })
+</script>
+

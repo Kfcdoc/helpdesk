@@ -1,23 +1,23 @@
+
 <!-- Modal -->
-<div class="modal fade" id="modalAgregarUsuarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
+<form id="frmAgregarUsuario" method="POST" onsubmit="return agregarNuevoUsuario()">
+    <div class="modal fade" id="modalAgregarUsuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo usuario</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
-            <!-- FORM ahora va aquí adentro -->
-            <form id="frmAgregarUsuario" method="POST" onsubmit="return agregarNuevoUsuario()">
+                </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-4">
-                            <label for="paterno">Apellido Paterno</label>
+                            <label for="paterno">Apellido paterno</label>
                             <input type="text" class="form-control" id="paterno" name="paterno" required>
                         </div>
                         <div class="col-sm-4">
-                            <label for="materno">Apellido Materno</label>
+                            <label for="materno">Apellido materno</label>
                             <input type="text" class="form-control" id="materno" name="materno" required>
                         </div>
                         <div class="col-sm-4">
@@ -27,15 +27,15 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <label for="fechaNacimiento">Fecha de nacimiento</label>
                             <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
                         </div>
                         <div class="col-sm-4">
                             <label for="sexo">Sexo</label>
                             <select class="form-control" id="sexo" name="sexo" required>
                                 <option value=""></option>
-                                <option value="M">Masculino</option>
                                 <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
                             </select>
                         </div>
                         <div class="col-sm-4">
@@ -46,7 +46,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <label for="correo">Correo</label>
-                            <input type="email" class="form-control" id="correo" name="correo">
+                            <input type="mail" class="form-control" id="correo" name="correo">
                         </div>
                         <div class="col-sm-4">
                             <label for="usuario">Usuario</label>
@@ -68,24 +68,16 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <label for="ubicacion">Ubicación</label>
+                            <label for="ubicacion">Ubicacion</label>
                             <textarea name="ubicacion" id="ubicacion" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <span class="btn btn-secondary" data-dismiss="modal">Cerrar</span>
-                    <button type="submit" class="btn btn-primary">Agregar</button>
+                <span class="btn btn-secondary" data-dismiss="modal">Cerrar</span>
+                <button class="btn btn-primary">Agregar</button>
                 </div>
-            </form>
-            <!-- fin form -->
-
+            </div>
         </div>
     </div>
-</div>
-
-
-
-
-
-
+</form>
